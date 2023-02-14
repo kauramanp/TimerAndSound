@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TimerAndSound</string>
+    <string name="action_settings">Settings</string>
+    <string name="change_time">Change Timer Time</string>
+    <string name="set_timer_time">Set timer time</string>
+    <string name="set">Set</string>
+    <string name="enter_time">Enter time</string>
+    <string name="cancel">Cancel</string>
+</resources>
