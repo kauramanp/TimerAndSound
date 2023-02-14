@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import com.aman.timerandsound.databinding.ActivityMainBinding
@@ -39,20 +40,29 @@ class MainActivity : AppCompatActivity() {
                     layout.etTime.requestFocus()
                 } else {
                     timerTime = layout.etTime.text.toString().toLong()
+                    timerTime = timerTime*1000
                     updateTimer()
                     dialogs.dismiss()
                 }
+            }
+            layout.btnCancel.setOnClickListener {
+                dialogs.dismiss()
             }
         }
 
         binding.ibPlay.setOnClickListener {
             if (this::timer.isInitialized) {
                 timer.start()
+            }else{
+                Toast.makeText(this, resources.getString(R.string.enter_time), Toast.LENGTH_LONG).show()
             }
         }
         binding.ibStop.setOnClickListener {
             if (this::timer.isInitialized) {
+                binding.tvTime.setText("0")
                 timer.cancel()
+            }else{
+                Toast.makeText(this, resources.getString(R.string.enter_time), Toast.LENGTH_LONG).show()
             }
         }
 

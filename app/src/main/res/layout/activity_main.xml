@@ -34,6 +34,8 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:text="0"
+            android:textSize="@dimen/margin_20dp"
             android:padding="@dimen/margin_20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
